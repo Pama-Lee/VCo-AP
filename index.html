@@ -90,7 +90,7 @@
       .result-table {
         width: 100%;
         border-collapse: collapse;
-        font-family: 'Times New Roman', Times, serif;
+        font-family: "Times New Roman", Times, serif;
 
         overflow-x: auto;
 
@@ -124,11 +124,13 @@
   <body>
     <div class="title">
       <h1>
-        Visual Co-Adaptation: Enhancing Image Generation with Human-in-the-loop Prompting
+        Visual Co-Adaptation: Enhancing Image Generation with Human-in-the-loop
+        Prompting
       </h1>
       <h3>
         <!-- Yangfan He,  Yuxuan Bai,  Jiake Li, Tianyu Shi, -->
-        Yangfan He<span class="span"></span>Yuxuan Bai<span class="span"></span>Jiake Li<span class="span"></span>Tianyu Shi
+        Yangfan He<span class="span"></span>Yuxuan Bai<span class="span"></span
+        >Jiake Li<span class="span"></span>Tianyu Shi
       </h3>
       <h2 style="color: #255aa9">NeurIPS 2024</h2>
       <div class="icons">
@@ -194,9 +196,7 @@
 
       <div class="section">
         <div>
-          <h2 class="subtitle">
-            Results
-          </h2>
+          <h2 class="subtitle">Results</h2>
           <table class="result-table">
             <tr>
               <th>Model</th>
@@ -234,7 +234,7 @@
               <td>29.86/0.23</td>
             </tr>
           </table>
-          <p style="font-size: 1em; margin-top: 10px;">
+          <p style="font-size: 1em; margin-top: 10px">
             <strong>Table 1.</strong> In the Human Evaluation experiment, we
             enlisted 30 human participants to score the generated images(the
             perfect score is 5). In the columns for CLIPscore and LIPIPS, the
@@ -242,13 +242,49 @@
             dialogue from the first to the last round.
           </p>
 
-          <div style="text-align: center;">
-          <img src="./images/e5.png" alt="Results" class="zoomable result-image" />
-            <p style="font-size: 1em;text-align: left;">
-              <strong>Figure 2.</strong> We carried out an examination to assess the flexibility and responsiveness of image generation models by incrementally refining the outputs based on user feedback. Beginning with a broad request for ”soup,” we narrowed down our specifications step by step, moving to ”pea soup” and subsequently ”enriching the prompt with ’croutons,’ followed by a request for ’more croutons’”. We evaluated the GPT, Stable Diffusion, Prompt-to-Prompt, and our proposed model in this sequence, arranged from left to right. Since our model had already generated a sufficiently good image by the third round, it did not proceed to the fourth round of generation. This methodology was designed to evaluate the models’ capacity to adapt to progressively detailed instructions.
+          <div style="text-align: center">
+            <img
+              src="./images/e5.png"
+              alt="Results"
+              class="zoomable result-image"
+            />
+            <p style="font-size: 1em; text-align: left">
+              <strong>Figure 2.</strong> We carried out an examination to assess
+              the flexibility and responsiveness of image generation models by
+              incrementally refining the outputs based on user feedback.
+              Beginning with a broad request for ”soup,” we narrowed down our
+              specifications step by step, moving to ”pea soup” and subsequently
+              ”enriching the prompt with ’croutons,’ followed by a request for
+              ’more croutons’”. We evaluated the GPT, Stable Diffusion,
+              Prompt-to-Prompt, and our proposed model in this sequence,
+              arranged from left to right. Since our model had already generated
+              a sufficiently good image by the third round, it did not proceed
+              to the fourth round of generation. This methodology was designed
+              to evaluate the models’ capacity to adapt to progressively
+              detailed instructions.
             </p>
           </div>
         </div>
+      </div>
+
+      <div class="section">
+        <h2 class="subtitle">Conclusion and Future Work</h2>
+        <p>
+          This study introduced a novel image generation method based on the
+          human-in-the-loop approach, significantly enhancing user interaction
+          and model responsiveness to user prompts. Our findings highlight the
+          model's effectiveness in generating images that closely align with
+          user expectations through adaptive prompt engineering and mutual
+          information optimization.
+        </p>
+        <p>
+          For future work, first, we plan to release the training data set for
+          our model; second, we also aim to refine the model's interpretative
+          capabilities, expand its applicability across diverse domains, and
+          conduct more benchmark experiments to evaluate the gap between user
+          intentions and generated images, pushing the boundaries of
+          personalized and intuitive image generation technologies.
+        </p>
       </div>
     </div>
 
