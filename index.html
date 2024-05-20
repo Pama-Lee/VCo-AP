@@ -1,3 +1,4 @@
+<!-- We still love you -->
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -11,13 +12,16 @@
       body {
         font-family: Arial, sans-serif;
       }
+
       .section {
         margin-bottom: 20px;
       }
+
       h1,
       h2 {
         color: #333;
       }
+
       p {
         color: #666;
       }
@@ -195,6 +199,10 @@
       <hr />
 
       <div class="section">
+        <h2 class="subtitle">Experiments</h2>
+      </div>
+
+      <div class="section">
         <div>
           <h2 class="subtitle">Results</h2>
           <table class="result-table">
@@ -290,19 +298,6 @@
 
     <script>
       const images = document.querySelectorAll("img");
-      images.forEach((image) => {
-        const placeholder = document.createElement("div");
-        placeholder.style.width = image.width + "px";
-        placeholder.style.height = image.height + "px";
-        placeholder.style.backgroundColor = "#ccc";
-        placeholder.style.display = "block";
-        placeholder.style.position = "relative";
-        placeholder.style.zIndex = "1";
-        image.insertAdjacentElement("afterend", placeholder);
-        image.addEventListener("load", () => {
-          placeholder.style.display = "none";
-        });
-      });
 
       const iconContainers = document.querySelectorAll(".icon-container");
       iconContainers.forEach((iconContainer) => {
