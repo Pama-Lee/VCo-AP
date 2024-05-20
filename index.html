@@ -123,6 +123,112 @@
           width: 100%;
         }
       }
+
+      .initial-prompt {
+        background-color: #e5f4ff;
+        padding: 10px 20px;
+        border-radius: 15px;
+      }
+
+      .dialog {
+        display: flex;
+        flex-direction: column;
+        margin-top: 20px;
+
+        .avatar {
+          width: 40px;
+          height: 40px;
+          border-radius: 50%;
+        }
+
+        .bot {
+          display: flex;
+          justify-content: flex-start;
+          text-align: left;
+          padding: 10px;
+          border-radius: 10px;
+          margin-bottom: 10px;
+        }
+
+        .bot-thinking {
+          display: flex;
+          justify-content: flex-start;
+          text-align: left;
+          padding: 10px;
+          border-radius: 10px;
+          margin-bottom: 10px;
+          border: 1px dashed #999;
+
+          position: relative;
+          &::before {
+            content: "Thinking";
+            position: absolute;
+            top: 0px;
+            right: 0px;
+            padding: 4px 10px;
+            border-radius: 5px;
+            font-size: 0.8em;
+            font-family: "Times New Roman", Times, serif;
+          }
+        }
+
+        .user {
+          display: flex;
+          justify-content: flex-end;
+          text-align: right;
+          padding: 10px;
+          border-radius: 10px;
+          margin-bottom: 10px;
+        }
+
+        p {
+          padding: 12px;
+          background-color: #f0f0f0;
+          border-radius: 10px;
+          margin: 0;
+        }
+
+        .container {
+          padding: 6px;
+          background-color: #f0f0f0;
+          border-radius: 10px;
+        }
+
+        .dialog-img {
+          width: 100px;
+          border-radius: 10px;
+
+          @media (max-width: 768px) {
+            width: 100%;
+            max-width: 80px;
+          }
+        }
+
+        .bot-icon {
+          margin-right: 20px;
+        }
+
+        .user-icon {
+          margin-left: 20px;
+        }
+      }
+
+      .dialog-box {
+        display: flex;
+        justify-content: space-around;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        gap: 20px;
+
+        @media (max-width: 768px) {
+          flex-direction: column;
+
+          & > div {
+            margin-bottom: 20px;
+            border-bottom: 1px solid #ddd;
+          }
+        }
+      }
     </style>
   </head>
   <body>
@@ -196,8 +302,226 @@
           closely.
         </p>
       </div>
-      <hr />
+    </div>
+    <hr />
+    <!-- 多轮对话展示 -->
+    <div class="section" style="margin: 0px 10vw">
+      <!-- justify-content: space-between; 两者之间的间距 -->
+      <div class="dialog-box">
+        <div>
+          <h2 class="subtitle">Multi-round Dialogue</h2>
+          <div>
+            <div>
+              <!-- initial prompt -->
+              <div class="initial-prompt">
+                <p style="margin: 0">
+                  <strong>Initial Prompt:</strong> A cartoon picture of a
+                  squirrel eating a small hurger.
+                </p>
+              </div>
+            </div>
+            <div class="dialog">
+              <div class="bot">
+                <div class="avatar bot-icon">
+                  <img
+                    src="https://img.icons8.com/ios/50/000000/bot.png"
+                    alt="bot"
+                  />
+                </div>
+                <div class="container">
+                  <img
+                    class="dialog-img"
+                    src="./images/big_buger.jpg"
+                    alt="bot"
+                  />
+                </div>
+              </div>
+              <!-- thinking: Maybe the user wants the burgers smaller -->
+              <div class="bot-thinking">
+                <div class="avatar bot-icon">
+                  <img
+                    src="https://img.icons8.com/ios/50/000000/bot.png"
+                    alt="bot"
+                  />
+                </div>
+                <p>Maybe the user wants the burgers smaller.</p>
+              </div>
+              <!-- 图片： 小汉堡 -->
+              <div class="bot">
+                <div class="avatar bot-icon">
+                  <img
+                    src="https://img.icons8.com/ios/50/000000/bot.png"
+                    alt="bot"
+                  />
+                </div>
+                <div class="container">
+                  <img
+                    class="dialog-img"
+                    src="./images/small_buger.jpg"
+                    alt="bot"
+                  />
+                </div>
+              </div>
+              <!-- I think it is good enough -->
+              <div class="bot">
+                <div class="avatar bot-icon">
+                  <img
+                    src="https://img.icons8.com/ios/50/000000/bot.png"
+                    alt="bot"
+                  />
+                </div>
+                <p>I think it is good enough, what's your feeling?</p>
+              </div>
+              <!-- user: I think the burgur should be smaller -->
+              <div class="user user-icon">
+                <p>I think the burgur should be smaller.</p>
+                <div class="avatar">
+                  <img
+                    src="https://img.icons8.com/ios/50/000000/user"
+                    alt="user"
+                  />
+                </div>
+              </div>
 
+              <!-- 图片： 小汉堡 -->
+              <div class="bot">
+                <div class="avatar bot">
+                  <img
+                    src="https://img.icons8.com/ios/50/000000/bot.png"
+                    alt="bot"
+                  />
+                </div>
+                <div class="container">
+                  <img
+                    class="dialog-img"
+                    src="./images/small_buger.jpg"
+                    alt="bot"
+                  />
+                </div>
+              </div>
+
+              <!-- User: That's great -->
+              <div class="user user-icon">
+                <p>That's great!</p>
+                <div class="avatar">
+                  <img
+                    src="https://img.icons8.com/ios/50/000000/user"
+                    alt="user"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div>
+          <h2 class="subtitle">Multi-round Dialogue</h2>
+          <div>
+            <div>
+              <!-- initial prompt -->
+              <div class="initial-prompt">
+                <p style="margin: 0">
+                  <strong>Initial Prompt:</strong> A cartoon picture of a
+                  squirrel eating a small hurger.
+                </p>
+              </div>
+            </div>
+            <div class="dialog">
+              <div class="bot">
+                <div class="avatar bot-icon">
+                  <img
+                    src="https://img.icons8.com/ios/50/000000/bot.png"
+                    alt="bot"
+                  />
+                </div>
+                <div class="container">
+                  <img
+                    class="dialog-img"
+                    src="./images/big_buger.jpg"
+                    alt="bot"
+                  />
+                </div>
+              </div>
+              <!-- thinking: Maybe the user wants the burgers smaller -->
+              <div class="bot-thinking">
+                <div class="avatar bot-icon">
+                  <img
+                    src="https://img.icons8.com/ios/50/000000/bot.png"
+                    alt="bot"
+                  />
+                </div>
+                <p>Maybe the user wants the burgers smaller.</p>
+              </div>
+              <!-- 图片： 小汉堡 -->
+              <div class="bot">
+                <div class="avatar bot-icon">
+                  <img
+                    src="https://img.icons8.com/ios/50/000000/bot.png"
+                    alt="bot"
+                  />
+                </div>
+                <div class="container">
+                  <img
+                    class="dialog-img"
+                    src="./images/small_buger.jpg"
+                    alt="bot"
+                  />
+                </div>
+              </div>
+              <!-- I think it is good enough -->
+              <div class="bot">
+                <div class="avatar bot-icon">
+                  <img
+                    src="https://img.icons8.com/ios/50/000000/bot.png"
+                    alt="bot"
+                  />
+                </div>
+                <p>I think it is good enough, what's your feeling?</p>
+              </div>
+              <!-- user: I think the burgur should be smaller -->
+              <div class="user user-icon">
+                <p>I think the burgur should be smaller.</p>
+                <div class="avatar">
+                  <img
+                    src="https://img.icons8.com/ios/50/000000/user"
+                    alt="user"
+                  />
+                </div>
+              </div>
+
+              <!-- 图片： 小汉堡 -->
+              <div class="bot">
+                <div class="avatar bot">
+                  <img
+                    src="https://img.icons8.com/ios/50/000000/bot.png"
+                    alt="bot"
+                  />
+                </div>
+                <div class="container">
+                  <img
+                    class="dialog-img"
+                    src="./images/small_buger.jpg"
+                    alt="bot"
+                  />
+                </div>
+              </div>
+
+              <!-- User: That's great -->
+              <div class="user user-icon">
+                <p>That's great!</p>
+                <div class="avatar">
+                  <img
+                    src="https://img.icons8.com/ios/50/000000/user"
+                    alt="user"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <hr />
+    <div class="content">
       <div class="section">
         <h2 class="subtitle">Experiments</h2>
       </div>
