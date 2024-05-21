@@ -234,6 +234,10 @@
           }
         }
       }
+
+      .dia {
+        width: 45%;
+      }
     </style>
   </head>
   <body>
@@ -313,7 +317,7 @@
     <div class="section" style="margin: 0px 10vw">
       <!-- justify-content: space-between; 两者之间的间距 -->
       <div class="dialog-box">
-        <div>
+        <div class="dia">
           <h2 class="subtitle">Single-round Dialogue - Self Correction</h2>
           <div>
             <div>
@@ -326,7 +330,7 @@
               </div>
             </div>
             <div class="dialog">
-              <div class="bot">
+              <div class="bot d-1">
                 <div class="avatar bot-icon">
                   <img
                     src="https://img.icons8.com/ios/50/000000/bot.png"
@@ -342,7 +346,7 @@
                 </div>
               </div>
               <!-- thinking: Maybe the user wants the burgers smaller -->
-              <div class="bot-thinking">
+              <div class="bot-thinking d-2">
                 <div class="avatar bot-icon">
                   <img
                     src="https://img.icons8.com/ios/50/000000/bot.png"
@@ -352,7 +356,7 @@
                 <p>Maybe the user wants the burgers <strong>smaller</strong>.</p>
               </div>
               <!-- 图片： 小汉堡 -->
-              <div class="bot">
+              <div class="bot d-3">
                 <div class="avatar bot-icon">
                   <img
                     src="https://img.icons8.com/ios/50/000000/bot.png"
@@ -368,7 +372,7 @@
                 </div>
               </div>
               <!-- I think it is good enough -->
-              <div class="bot">
+              <div class="bot d-4">
                 <div class="avatar bot-icon">
                   <img
                     src="https://img.icons8.com/ios/50/000000/bot.png"
@@ -378,9 +382,9 @@
                 <p>I think it is good enough, what's your feeling?</p>
               </div>
               <!-- user: I think the burgur should be smaller -->
-              <div class="user user-icon">
+              <div class="user d-5">
                 <p>I think the burgur should be smaller.</p>
-                <div class="avatar">
+                <div class="avatar user-icon">
                   <img
                     src="https://img.icons8.com/ios/50/000000/user"
                     alt="user"
@@ -389,7 +393,7 @@
               </div>
 
               <!-- 图片： 小汉堡 -->
-              <div class="bot">
+              <div class="bot d-6">
                 <div class="avatar bot-icon">
                   <img
                     src="https://img.icons8.com/ios/50/000000/bot.png"
@@ -406,9 +410,9 @@
               </div>
 
               <!-- User: That's great -->
-              <div class="user user-icon">
+              <div class="user d-7">
                 <p>That's great!</p>
-                <div class="avatar">
+                <div class="avatar user-icon">
                   <img
                     src="https://img.icons8.com/ios/50/000000/user"
                     alt="user"
@@ -418,7 +422,7 @@
             </div>
           </div>
         </div>
-        <div>
+        <div class="dia">
           <h2 class="subtitle">Multi-round Dialogue - User Correction</h2>
           <div>
             <div>
@@ -431,7 +435,7 @@
             </div>
             <div class="dialog">
               <!-- What's the size of the burger? -->
-              <div class="bot">
+              <div class="bot d-1">
                 <div class="avatar bot-icon">
                   <img
                     src="https://img.icons8.com/ios/50/000000/bot.png"
@@ -441,9 +445,9 @@
                 <p>What's the size of the burger?</p>
               </div>
               <!-- User: small -->
-              <div class="user user-icon">
+              <div class="user d-2">
                 <p>Small.</p>
-                <div class="avatar">
+                <div class="avatar user-icon">
                   <img
                     src="https://img.icons8.com/ios/50/000000/user"
                     alt="user"
@@ -451,7 +455,7 @@
                 </div>
               </div>
               <!-- Bot: What's style you want? -->
-              <div class="bot">
+              <div class="bot d-3">
                 <div class="avatar bot-icon">
                   <img
                     src="https://img.icons8.com/ios/50/000000/bot.png"
@@ -461,9 +465,9 @@
                 <p>What's style you want?</p>
               </div>
               <!-- User: cartoon -->
-              <div class="user user-icon">
+              <div class="user d-4">
                 <p>Cartoon.</p>
-                <div class="avatar">
+                <div class="avatar user-icon">
                   <img
                     src="https://img.icons8.com/ios/50/000000/user"
                     alt="user"
@@ -471,7 +475,7 @@
                 </div>
               </div>
               <!-- 图片： 大汉堡 -->
-              <div class="bot">
+              <div class="bot d-5">
                 <div class="avatar bot-icon">
                   <img
                     src="https://img.icons8.com/ios/50/000000/bot.png"
@@ -487,7 +491,7 @@
                 </div>
               </div>
               <!-- Bot: What's your feeling about? -->
-              <div class="bot">
+              <div class="bot d-6">
                 <div class="avatar bot-icon">
                   <img
                     src="https://img.icons8.com/ios/50/000000/bot.png"
@@ -497,9 +501,9 @@
                 <p>What's your feeling about?</p>
               </div>
               <!-- user: I think the burgur should be smaller. -->
-              <div class="user user-icon">
+              <div class="user d-7">
                 <p>I think the burgur should be smaller.</p>
-                <div class="avatar">
+                <div class="avatar user-icon">
                   <img
                     src="https://img.icons8.com/ios/50/000000/user"
                     alt="user"
@@ -508,7 +512,7 @@
               </div>
 
               <!-- 图片： 小汉堡 -->
-              <div class="bot">
+              <div class="bot d-8">
                 <div class="avatar bot-icon">
                   <img
                     src="https://img.icons8.com/ios/50/000000/bot.png"
@@ -525,9 +529,9 @@
               </div>
 
               <!-- User: That's great -->
-              <div class="user user-icon">
+              <div class="user d-9">
                 <p>That's great!</p>
-                <div class="avatar">
+                <div class="avatar user-icon">
                   <img
                     src="https://img.icons8.com/ios/50/000000/user"
                     alt="user"
@@ -676,6 +680,85 @@
           document.body.appendChild(img);
         });
       });
-    </script>
+    
+      // dialog
+      const dialogBoxes = document.querySelectorAll(".dia");
+      dialogBoxes.forEach((dialogBox,key) => {
+        const dialog = dialogBox.querySelector(".dialog");
+        // 找到所有的class: d-*
+        const dialogClasses = [];
+        dialog.childNodes.forEach((node) => {
+          if (node.nodeType === 1) {
+            const classes = node.className.split(" ");
+            classes.forEach((className) => {
+              if (className.startsWith("d-")) {
+                dialogClasses.push(className);
+
+                // 隐藏, 不占位
+                node.style.opacity = 0;
+                node.style.transition = "opacity 0.5s";
+                
+              
+              }
+            });
+          }
+        });
+
+        let index = 0;
+        handle(index,key);
+        dialogBox.addEventListener("click", () => {
+          if (index < dialogClasses.length) {
+            const dialogClass = dialogClasses[index];
+            const dialogNode = dialog.querySelector(`.${dialogClass}`);
+            dialogNode.style.opacity = 1;
+            
+            index++;
+
+            handle(index,key);
+          }
+        });
+
+        function handle(index,key){
+
+          if (index == 0) {
+          // 显示让用户知道可以点击
+          dialogBox.style.cursor = "pointer";
+          dialogBox.style.position = "relative";
+          dialogBox.style.border = "1px solid #ddd";
+          dialogBox.style.borderRadius = "10px";
+          dialogBox.style.padding = "10px";
+          dialogBox.style.transition = "border-color 0.3s";
+          dialogBox.addEventListener("mouseover", () => {
+            dialogBox.style.borderColor = "#666";
+          });
+          var tips = document.createElement("div");
+          tips.innerHTML = "Click to continue";
+          tips.id = "tips-" + key;
+          tips.style.position = "absolute";
+          // 垂直居中
+          tips.style.top = "50%";
+          tips.style.left = "50%";
+          tips.style.transform = "translate(-50%, -50%)";
+          tips.style.color = "#666";
+          tips.style.fontSize = "calc(1em + 0.2vw)";
+          dialogBox.appendChild(tips);
+        } else {
+          dialogBox.style.border = "none";
+          var tips = dialogBox.querySelector("#tips-" + key);
+          if (tips) {
+            tips.remove();
+          }
+        }
+
+        // 如果是最后一个
+        if (index == dialogClasses.length) {
+          dialogBox.style.cursor = "default";
+        }
+      
+      }
+
+      });
+      
+      </script>
   </body>
 </html>
