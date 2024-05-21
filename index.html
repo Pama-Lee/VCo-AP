@@ -130,23 +130,27 @@
         border-radius: 15px;
       }
 
+      .avatar {
+          width: 30px;
+          height: 30px;
+          border-radius: 50%;
+
+          img {
+            width: 100%;
+            border-radius: 50%;
+          }
+        }
+
       .dialog {
         display: flex;
         flex-direction: column;
         margin-top: 20px;
-
-        .avatar {
-          width: 40px;
-          height: 40px;
-          border-radius: 50%;
-        }
 
         .bot {
           display: flex;
           justify-content: flex-start;
           text-align: left;
           padding: 10px;
-          border-radius: 10px;
           margin-bottom: 10px;
         }
 
@@ -182,10 +186,11 @@
         }
 
         p {
-          padding: 12px;
+          padding: 10px;
           background-color: #f0f0f0;
           border-radius: 10px;
           margin: 0;
+          font-size: 0.9em;
         }
 
         .container {
@@ -205,7 +210,7 @@
         }
 
         .bot-icon {
-          margin-right: 20px;
+          margin-right: 10px;
         }
 
         .user-icon {
