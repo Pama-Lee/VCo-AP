@@ -309,7 +309,7 @@
       <!-- justify-content: space-between; 两者之间的间距 -->
       <div class="dialog-box">
         <div>
-          <h2 class="subtitle">Multi-round Dialogue</h2>
+          <h2 class="subtitle">Single-round Dialogue - Self Correction</h2>
           <div>
             <div>
               <!-- initial prompt -->
@@ -344,7 +344,7 @@
                     alt="bot"
                   />
                 </div>
-                <p>Maybe the user wants the burgers smaller.</p>
+                <p>Maybe the user wants the burgers <strong>smaller</strong>.</p>
               </div>
               <!-- 图片： 小汉堡 -->
               <div class="bot">
@@ -385,7 +385,7 @@
 
               <!-- 图片： 小汉堡 -->
               <div class="bot">
-                <div class="avatar bot">
+                <div class="avatar bot-icon">
                   <img
                     src="https://img.icons8.com/ios/50/000000/bot.png"
                     alt="bot"
@@ -414,18 +414,58 @@
           </div>
         </div>
         <div>
-          <h2 class="subtitle">Multi-round Dialogue</h2>
+          <h2 class="subtitle">Multi-round Dialogue - User Correction</h2>
           <div>
             <div>
               <!-- initial prompt -->
               <div class="initial-prompt">
                 <p style="margin: 0">
-                  <strong>Initial Prompt:</strong> A cartoon picture of a
-                  squirrel eating a small hurger.
+                  <strong>Initial Prompt:</strong> A cartoon eats a hurger.
                 </p>
               </div>
             </div>
             <div class="dialog">
+              <!-- What's the size of the burger? -->
+              <div class="bot">
+                <div class="avatar bot-icon">
+                  <img
+                    src="https://img.icons8.com/ios/50/000000/bot.png"
+                    alt="bot"
+                  />
+                </div>
+                <p>What's the size of the burger?</p>
+              </div>
+              <!-- User: small -->
+              <div class="user user-icon">
+                <p>Small.</p>
+                <div class="avatar">
+                  <img
+                    src="https://img.icons8.com/ios/50/000000/user"
+                    alt="user"
+                  />
+                </div>
+              </div>
+              <!-- Bot: What's style you want? -->
+              <div class="bot">
+                <div class="avatar bot-icon">
+                  <img
+                    src="https://img.icons8.com/ios/50/000000/bot.png"
+                    alt="bot"
+                  />
+                </div>
+                <p>What's style you want?</p>
+              </div>
+              <!-- User: cartoon -->
+              <div class="user user-icon">
+                <p>Cartoon.</p>
+                <div class="avatar">
+                  <img
+                    src="https://img.icons8.com/ios/50/000000/user"
+                    alt="user"
+                  />
+                </div>
+              </div>
+              <!-- 图片： 大汉堡 -->
               <div class="bot">
                 <div class="avatar bot-icon">
                   <img
@@ -441,17 +481,7 @@
                   />
                 </div>
               </div>
-              <!-- thinking: Maybe the user wants the burgers smaller -->
-              <div class="bot-thinking">
-                <div class="avatar bot-icon">
-                  <img
-                    src="https://img.icons8.com/ios/50/000000/bot.png"
-                    alt="bot"
-                  />
-                </div>
-                <p>Maybe the user wants the burgers smaller.</p>
-              </div>
-              <!-- 图片： 小汉堡 -->
+              <!-- Bot: What's your feeling about? -->
               <div class="bot">
                 <div class="avatar bot-icon">
                   <img
@@ -459,25 +489,9 @@
                     alt="bot"
                   />
                 </div>
-                <div class="container">
-                  <img
-                    class="dialog-img"
-                    src="./images/small_buger.jpg"
-                    alt="bot"
-                  />
-                </div>
+                <p>What's your feeling about?</p>
               </div>
-              <!-- I think it is good enough -->
-              <div class="bot">
-                <div class="avatar bot-icon">
-                  <img
-                    src="https://img.icons8.com/ios/50/000000/bot.png"
-                    alt="bot"
-                  />
-                </div>
-                <p>I think it is good enough, what's your feeling?</p>
-              </div>
-              <!-- user: I think the burgur should be smaller -->
+              <!-- user: I think the burgur should be smaller. -->
               <div class="user user-icon">
                 <p>I think the burgur should be smaller.</p>
                 <div class="avatar">
@@ -490,7 +504,7 @@
 
               <!-- 图片： 小汉堡 -->
               <div class="bot">
-                <div class="avatar bot">
+                <div class="avatar bot-icon">
                   <img
                     src="https://img.icons8.com/ios/50/000000/bot.png"
                     alt="bot"
